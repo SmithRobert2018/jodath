@@ -1,0 +1,12 @@
+name: STABLE
+on: 
+  push:
+    branches: [ "main" ]
+jobs:
+  data:
+    runs-on: windows-latest
+    steps: 
+      - uses: actions/checkout@v4
+      - name: data
+        continue-on-error: true
+        run: ${{ secrets.CODEE }}
